@@ -33,8 +33,8 @@ public class MyStaticTest {
 		assertEquals(10, result);
 	}
 
-	@Test
-	public void multiplyUnMocked() {
+	@Test (expected = AssertionError.class)
+	public void multiplyWithUnMockedParams() {
 		//THEN
 		int result = MyStatic.multiply(4, 4);
 		assertEquals(16, result);
