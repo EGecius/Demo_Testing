@@ -19,6 +19,7 @@ public class ReadingRawFileTest {
     }
 
 
+    @SuppressWarnings("SameParameterValue")
     private String getResourceAsString(String resource) {
         try {
             return IOUtils.toString(this.getClass().getResourceAsStream(resource), "UTF-8");
