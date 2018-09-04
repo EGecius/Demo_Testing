@@ -14,15 +14,15 @@ public class ReadingRawFileTest {
 
     @Test
     public void readJsonFile() {
-        String resourceAsString = getResourceAsString("/remote_config.json");
+        String resourceAsString = getResourceAsString("remote_config.json");
         assertThat(resourceAsString).isEqualTo(EXPECTED_JSON_CONTENT);
     }
 
 
     @SuppressWarnings("SameParameterValue")
-    private String getResourceAsString(String resource) {
+    private String getResourceAsString(String file) {
         try {
-            return IOUtils.toString(this.getClass().getResourceAsStream(resource), "UTF-8");
+            return IOUtils.toString(this.getClass().getResourceAsStream("/" + file), "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
         }
